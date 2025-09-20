@@ -68,6 +68,8 @@ public class Opcional1 {
 		double tiempoCoche2= tiempoTotal*60;
 		System.out.println("El que llegará antes es el primer coche. Tarda "+tiempoCoche1+" minutos, mientras que el coche"
 		+ " 2 tarda "+tiempoCoche2+" minutos");*/
+		
+		//Meto aqui un comentario para ver que se haya actualizado
 
 	}
 
