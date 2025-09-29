@@ -1,5 +1,6 @@
 package objetos;
-import java.util.Scanner;//Esto hay que hacerlo para que funcione el Scanner. Importamos la librería
+import java.util.*;//Esto hay que hacerlo para que funcione el Random. Importamos la librería
+//si en vez de poner .Scanner o .Random ponemos .* estamos importando todas las librerias a la vez
 
 public class objetos {
 
@@ -79,11 +80,11 @@ public class objetos {
 		
 		//TRIM--Elimina espacios que haya antes y después de una cadena
 			
-			String r="         epa, qué pasa aquí";
-			System.out.println(r);
+			//String r="         epa, qué pasa aquí";
+			//System.out.println(r);
 			
-			r=r.trim();
-			System.out.println(r);
+			//r=r.trim();
+			//System.out.println(r);
 			
 		//REPLACE--Cambia caracteres o cadenas dentro de otra
 			
@@ -206,8 +207,109 @@ public class objetos {
 				int z= (int)(Math.random()*6)+1;//Simulo la tirada de un dado
 					//Aquí iría desde 0 a 5. Si a final ponemos un +1, abarca desde 1 a 6
 				System.out.println(z);
-	
-	
+				//Ejercicio: usando Scanner y Math, calcular el volumen de una esfera
+							
+							/*System.out.println("Vamos a calcular el volumen de una esfera. ¿Cuál es el radio?");
+							double rad= scDouble.nextDouble();
+							double volumen= (4.0/3.0)*Math.PI*Math.pow(rad,3);
+							System.out.println("El volumen de la esfera sería "+volumen);*/
+							
+				//Ejercicio: que el programa pregunte por 2 números enteros y te diga cuál es el mayor
+							
+							/*System.out.println("Dime el primer número entero");
+							int num1= scInt.nextInt();
+							System.out.println("Y ahora dime el segundo número");
+							int num2= scInt.nextInt();
+							System.out.println("El número que es mayor es el "+Math.max(num1, num2));*/
+							
+				//Ejercicio: que el programa pregunte por 3 números enteros y te diga cuál es el mayor
+							
+							/*System.out.println("Dime el primer número entero");
+							int numero1= scInt.nextInt();
+							System.out.println("Dime el segundo número");
+							int numero2= scInt.nextInt();
+							System.out.println("Y ahora dime el tercero");
+							int numero3= scInt.nextInt();
+							int primeraOperacion= Math.max(numero1, numero2);
+							System.out.println("El número que es mayor es el "+Math.max(numero3, primeraOperacion));*/
+							
+				//Ejercicio: programa que pide un número con decimales y que devuelva el mismo número SIN LA PARTE ENTERA
+							
+							/*System.out.println("Dime un número con decimal");
+							double decimal= scDouble.nextDouble(); 
+							int enteroo= (int)decimal;
+							double resultado= decimal-enteroo;				
+							System.out.println("La parte decimal de ese número sería "+resultado);*/
+				
+							//otra manera de resolverlo
+							
+							/*System.out.println("Dime un número con decimal");
+							double decimal= scDouble.nextDouble(); 
+							double parteEntera= Math.floor(decimal);
+							System.out.println("La parte decimal sería "+(decimal-parteEntera));*/
+							
+				//Ejercicio: programa que nos pide un número con muchos decimales. Lo queremos redondeado pero sólo con un decimal	
+							
+							/*System.out.println("Dime un número con muchos decimales");
+							double numero= scDouble.nextDouble();
+							double numero2= Math.round(numero*10.0)/10.0;
+							System.out.println("El número con un decimal sería "+numero2);*/
+				
+		//RANDOM*/
+				
+				
+				//int aleatorio= random.nextInt(1,7);//Sólo va desde el 1 al 6. El segundo parámetro siempre es un número menos
+				//System.out.println(aleatorio);
+				
+				//Ejercicio: preguntar por una palabra y que devuelva un caracter aleatorio de esa palabra
+				/*System.out.println("Introduce una palabra por favor");
+				String palabra= scLine.nextLine();
+				int longitud1= palabra.length();
+				int aleatorio1= random.nextInt(longitud1);
+				char a= palabra.charAt(aleatorio1);
+				System.out.println("El caracter aleatorio es "+a);*/
+				
+				//Ejercicio: preguntar por una frase y que devuelva un caracter aleatorio y que no se muestre ningún espacio
+				/*System.out.println("Introduce una frase por favor");
+				String frase= scLine.nextLine();
+				frase= frase.replace(" ", "");				
+				int longitud1= frase.length();
+				int aleatorio1= random.nextInt(longitud1);
+				char a= frase.charAt(aleatorio1);
+				System.out.println("El caracter aleatorio es "+a);*/
+				
+				//Ejercicio: que dé un número aleatorio entre 1 y 20. Tiene que poner El primer número aleatorio es x. Pulsa
+				//enter para continuar - Después segundo numero aleatorio y enter para continuar y por último un número
+				//aleatorio etre 3 y 12 del aleatorio anterior
+				Random r= new Random();
+				int a= r.nextInt();
+				int num1= r.nextInt(20)+1;
+				System.out.println("El primer número aleatorio es "+num1);
+				System.out.println("Pulsa enter para continuar");
+				scLine.nextLine();
+				int num2= r.nextInt(20)+1;
+				System.out.println("El segundo número aleatorio es "+num2);
+				System.out.println("Pulsa enter para continuar");
+				scLine.nextLine();
+				int numMin= Math.min(num1,num2); 
+				int numMay= Math.min(num1,num2); 
+				
+				//numero entero  aleatorio entre a y b  9 15
+				
+				//formula para poder hacer un random con 2 parámetros
+				//int a= r.nextInt(b-a+1)+a;
+								//(  0 6)  + a = 9 -15
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
 	}
 
 }
