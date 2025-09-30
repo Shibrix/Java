@@ -281,7 +281,7 @@ public class objetos {
 				//Ejercicio: que dé un número aleatorio entre 1 y 20. Tiene que poner El primer número aleatorio es x. Pulsa
 				//enter para continuar - Después segundo numero aleatorio y enter para continuar y por último un número
 				//aleatorio etre 3 y 12 del aleatorio anterior
-				Random r= new Random();
+				/*Random r= new Random();
 				int a= r.nextInt();
 				int num1= r.nextInt(20)+1;
 				System.out.println("El primer número aleatorio es "+num1);
@@ -298,10 +298,20 @@ public class objetos {
 				
 				//formula para poder hacer un random con 2 parámetros
 				//int a= r.nextInt(b-a+1)+a;
-								//(  0 6)  + a = 9 -15
+								//(  0 6)  + a = 9 -15*/
 				
 				
+				//EJERCICIO
+				//Introducir una frase y que cambie todas las a minúsculas por otra vocal aleatoria
 				
+				Random r= new Random();
+				System.out.println("Introduce una frase");
+				String frase= scLine.nextLine();
+				String vocales= "eiou";
+				int al= r.nextInt(4);
+				char aleatorio= vocales.charAt(al);
+				frase= frase.replace('a', aleatorio);
+				System.out.println(frase);
 				
 				
 				
