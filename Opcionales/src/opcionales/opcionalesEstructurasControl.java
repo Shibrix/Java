@@ -41,20 +41,12 @@ public class opcionalesEstructurasControl {
 		System.out.println("Introduce otro número");
 		double numero2= scInt.nextInt();
 		System.out.println("Pulse enter cada vez para obtener resultados");
-		double elevado;
-		double resultadoElevado;
-		double nuevaPotencia;
-		do{
+		double numeroAnterior= numero1;
+		while(numeroAnterior<1000000) {
 			scLine.nextLine();
-			elevado= Math.pow(numero1, numero2);
-			System.out.println("Elevado "+elevado);
-			resultadoElevado= (int)elevado;
-			System.out.println("Resultado :"+resultadoElevado);
-			nuevaPotencia= Math.pow(resultadoElevado,numero2);
-			nuevaPotencia=nuevaPotencia;
-			System.out.println(nuevaPotencia);
-
-		}while(nuevaPotencia<1000000);
+			numeroAnterior= Math.pow(numeroAnterior, numero2);
+			System.out.println("Elevado "+numeroAnterior);
+		}
 
 }
 }
