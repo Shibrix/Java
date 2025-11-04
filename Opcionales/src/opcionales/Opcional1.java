@@ -1,5 +1,5 @@
 package opcionales;
-
+import java.util.*;
 public class Opcional1 {
 
 	public static void main(String[] args) {
@@ -19,12 +19,12 @@ public class Opcional1 {
 		System.out.println("Necesitamos un total de "+harinaTotal+" gr de harina para "+personaTotal
 		+" personas");*/
 		
-		//EJERCICIO 3
-		double azucar= 250;
-		double porcion= 8;
-		double porcionTotal= 15;
-		double azucarTotal= (azucar*porcionTotal)/porcion;
-		System.out.println("Necesitamos un total de "+azucarTotal+" gr para tener "+porcionTotal+" porciones");
+//		//EJERCICIO 3
+//		double azucar= 250;
+//		double porcion= 8;
+//		double porcionTotal= 15;
+//		double azucarTotal= (azucar*porcionTotal)/porcion;
+//		System.out.println("Necesitamos un total de "+azucarTotal+" gr para tener "+porcionTotal+" porciones");
 		
 		/*EJERCICIO 4
 		double longitud= 5;
@@ -70,7 +70,13 @@ public class Opcional1 {
 		+ " 2 tarda "+tiempoCoche2+" minutos");*/
 		
 		//Meto aqui un comentario para ver que se haya actualizado
+		
+//		Scanner scLine= new Scanner(System.in);
+//		Scanner scInt= new Scanner(System.in);
+//		Scanner scDouble= new Scanner(System.in);
+		
 
+		
 	}
 
 }
