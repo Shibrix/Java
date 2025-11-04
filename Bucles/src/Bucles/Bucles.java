@@ -61,25 +61,35 @@ public class Bucles {
 // BUCLE WHILE
 		//El while normal puede ser que nunca se ejecute
 
-		/*
-		 * int suma=0; int contador=0; while(suma<176) { contador++; suma=
-		 * suma+contador; System.out.println("while suma "+suma+" sumo: "+contador);
-		 * //Mientras que la suma //no llegue a 176, seguirá sumando }
-		 * System.out.println("Suma: "+suma); System.out.println("contador: "+contador);
-		 */
+		
+//		 int suma=0;
+//		 int contador=0;
+//		 while(suma<176) {
+//			 contador++;
+//			 suma=suma+contador;
+//			 System.out.println("while suma "+suma+" sumo: "+contador);
+//		 }
+//		  
+//		 //Mientras que la suma //no llegue a 176, seguirá sumando }
+//		  System.out.println("Suma: "+suma); System.out.println("contador: "+contador);
+		 
 
 		// EJERCICIO: HACER BUCLE CON WHILE QUE VAYA DEL 0 AL 60 Y DE 3 EN 3. Y DESPUÉS NO PONER LOS
 		// QUE ESTÁN ENTE 20 Y 40
 
-		/*int contador = 0; //Esto es equivalente al int i=0 del for
-		while (contador <= 60) { //Equivale al i<=60 del for
-			if (contador < 20 || contador > 40) {
-				System.out.println(contador);
-			}
+//		int contador = 0; // Esto es equivalente al int i=0 del for
+//		while (contador < 61) { // Equivale al i<=60 del for
+//			if (contador <= 20 || contador >= 40) {
+//				System.out.println(contador);
+//			}
+//
+//			contador = contador + 3;
+//
+//		}
 			//Otra manera de hacerlo: if(!(contador>=20 && contador<=40))
-			contador=contador+3;//Equivalente a i=i+3 del for
+			//contador=contador+3;//Equivalente a i=i+3 del for
 
-		}*/
+		
 		//EJERCICIO: HAZ UN LISTADO DEL 1 AL 10 Y EN EL 5 QUE SALGA LA PALABRA CINCO
 		
 //		System.out.println("Empieza el for");
@@ -130,14 +140,16 @@ public class Bucles {
 		
 		//EJERCICIO: hacer un bucle infinito en el que el usuario tenga que meter un número entero
 		//y siempre salga la opción de "ha elegido esto, introduzca un número"
-		while(true) {
-			System.out.println("Introduzca un número entero");
-			int numero = scInt.nextInt();
-			if(numero==-1) {
-				continue;
-			}
-			System.out.println("Has acabado el bucle");
-		}
+//		while(true) {
+//			System.out.println("Introduzca un número entero");
+//			int numero = scInt.nextInt();
+//			System.out.println("Has elegido "+numero);
+//			if(numero<=-1) {
+//				System.out.println("Has acabado el bucle");
+//				break;
+//			}
+//			
+//		}
 		
 		
 //		do {
