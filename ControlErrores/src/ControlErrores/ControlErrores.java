@@ -19,30 +19,30 @@ public class ControlErrores {
 		int numero=0;
 		boolean letra= false;
 //
-//		do {
-//			Scanner scInt= new Scanner(System.in); //Poniendo el Scanner aquí, no saltará error en el bucle aunque lo hayamos cerrado
-		// en el finally
-//			try {
-//				System.out.println("Introduce un número por favor");
-//				numero = scInt.nextInt();
-//				letra = false;
-//			} catch (Exception e) {
-//				// TODO Auto-generated catch block
-//				scInt.nextLine(); //Esto hay que ponerlo para resetear el enter de line, sino se genera bucle infinito
-//				letra = true;
-//				System.out.println("No has introducido un número"); // Al "coger" el error, el programa no se rompe.
-//																	// Salta el error y continúa leyendo el código
-//			} finally {
-//				//Lo que está aquí dentro se ejecuta siempre sí o sí,aunque pongamos un break para romper el código
-//				//¿Para qué sirve? Está pensado para cerrar los recursos de entrada que hemos usado
-//				//EJEMPLO: el Scanner ya no se va a usar más, así que ejecutamos un close
-//				scInt.close();
-//			}
-//		} while (letra == true);
-//		
-//		System.out.println("El cuadrado del número es "+ Math.pow(numero,2));
-//		
-//		System.out.println("El programa continúa");
+		do {
+			Scanner scInt= new Scanner(System.in); //Poniendo el Scanner aquí, no saltará error en el bucle aunque lo hayamos cerrado
+		 //en el finally
+			try {
+				System.out.println("Introduce un número por favor");
+				numero = scInt.nextInt();
+				letra = false;
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				scInt.nextLine(); //Esto hay que ponerlo para resetear el enter de line, sino se genera bucle infinito
+				letra = true;
+				System.out.println("No has introducido un número"); // Al "coger" el error, el programa no se rompe.
+																	// Salta el error y continúa leyendo el código
+			} finally {
+				//Lo que está aquí dentro se ejecuta siempre sí o sí,aunque pongamos un break para romper el código
+				//¿Para qué sirve? Está pensado para cerrar los recursos de entrada que hemos usado
+				//EJEMPLO: el Scanner ya no se va a usar más, así que ejecutamos un close
+				scInt.close();
+			}
+		} while (letra == true);
+		
+		System.out.println("El cuadrado del número es "+ Math.pow(numero,2));
+		
+		System.out.println("El programa continúa");
 		
 	//MULTICATCH
 		
