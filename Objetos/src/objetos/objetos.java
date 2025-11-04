@@ -56,13 +56,13 @@ public class objetos {
 		
 		//STRING STR --es el contrario de charAt. Aquí devuelve la posición y sirve para CUALQUIER CARACTER
 			String g= "ya estamos cati de finde";
-			int posicion= g.indexOf('t');
+			int posicion= g.indexOf('i');
 			System.out.println(posicion);
 		
 		//si hubiese más caracteres iguales, SIEMPRE va a devolver la que esté en la primera posición
 		//Para buscar el siguiente se haría así
 		
-			int posicion2= g.indexOf('t',6);
+			int posicion2= g.indexOf('i',posicion+1);
 			System.out.println(posicion2);
 		
 		//S no hubiese ningún caracter de los que hemos dicho, devuelve un -1
@@ -141,15 +141,15 @@ public class objetos {
 			
 			//Ejercicio: usando scanner, usar una palabra y que al responder nos devuelva primero una mitad
 			//y después la otra pero en mayúsculas			
-			/*System.out.println("Introduce una palabra o frase");
-			String palabra1= scLine.nextLine();
-			int lon= palabra1.length();
-			int mitadLon= lon/2;
-			String primeraParte= palabra1.substring(0, mitadLon);
-			String segundaParte= palabra1.substring(mitadLon);
-			segundaParte= segundaParte.toUpperCase();
-			primeraParte= primeraParte.toLowerCase();
-			System.out.println("¿La palabra es "+primeraParte+" \n"+segundaParte+" ?");*/
+//			System.out.println("Introduce una palabra o frase");
+//			String palabra1= scLine.nextLine();
+//			int lon= palabra1.length();
+//			int mitadLon= lon/2;
+//			String primeraParte= palabra1.substring(0, mitadLon);
+//			String segundaParte= palabra1.substring(mitadLon);
+//			segundaParte= segundaParte.toUpperCase();
+//			primeraParte= primeraParte.toLowerCase();
+//			System.out.println("¿La palabra es "+primeraParte+" \n"+segundaParte+" ?");
 			
 			//Ejercicio 2: pregunte por tu nombre, a continuación que pregunte por la edad y por último
 			//que diga "nombre, Te faltan x años par llegar a los 100"
@@ -170,38 +170,38 @@ public class objetos {
 			//El Math es para usar constantes directamente
 			System.out.println(Math.PI);
 			
-			//MÉTODO VALOR ABSOLUTO (abs())
+		//MÉTODO VALOR ABSOLUTO (abs())
 			int entero= -10;
 			System.out.println(Math.abs(entero));
 			
-			//MÉTODO POW(BASE, EXPONENTE)
+		//MÉTODO POW(BASE, EXPONENTE)
 			int radioo= 4;
 			System.out.println(Math.pow(radioo,2));//Devuelve el elevado a (lo que sea)
 			// el método math.pow no reconoce los int, tiene que estar declarado como double
 			
-			//METODO SQRT()
+		//METODO SQRT()
 			 //Devuelve la raíz cuadrada
 				double rr= Math.sqrt(25);
 				System.out.println(rr);
 			
-			//METODO MIN Y MAX
+		//METODO MIN Y MAX
 				int a1= 10;
 				int b1= 20;
 				
 				System.out.println(Math.max(a1, b1)); //Entre 2 valores aportados, te dice el máximo
 				System.out.println(Math.min(a1, b1)); //Entre 2 valores aportados, te dice el mínimo
 			
-			//MÉTODO ROUND
+		//MÉTODO ROUND
 				//Sirve para redondear al número entero más cercano				
 				double d1= 28.716372462;
 				long ff= Math.round(d1);
 				int g1=(int)ff;
 				System.out.println(g1);
 				
-			//MATH FLOOR Y CEIL
+		//MATH FLOOR Y CEIL
 				//Floor redondea hacia abajo y Ceil redondea hacia arriba
 				
-			//MATH RANDOM
+		//MATH RANDOM
 				//Da números aleatorios entre 0.0 y 1.0
 				//Se puede castear a número entero, como podemos ver abajo
 				int z= (int)(Math.random()*6)+1;//Simulo la tirada de un dado
@@ -243,10 +243,10 @@ public class objetos {
 				
 							//otra manera de resolverlo
 							
-							/*System.out.println("Dime un número con decimal");
-							double decimal= scDouble.nextDouble(); 
-							double parteEntera= Math.floor(decimal);
-							System.out.println("La parte decimal sería "+(decimal-parteEntera));*/
+//							System.out.println("Dime un número con decimal");
+//							double decimal= scDouble.nextDouble(); 
+//							double parteEntera= Math.floor(decimal);
+//							System.out.println("La parte decimal sería "+(decimal-parteEntera));
 							
 				//Ejercicio: programa que nos pide un número con muchos decimales. Lo queremos redondeado pero sólo con un decimal	
 							
@@ -262,32 +262,32 @@ public class objetos {
 				//System.out.println(aleatorio);
 				
 				//Ejercicio: preguntar por una palabra y que devuelva un caracter aleatorio de esa palabra
-				/*System.out.println("Introduce una palabra por favor");
-				String palabra= scLine.nextLine();
-				int longitud1= palabra.length();
-				int aleatorio1= random.nextInt(longitud1);
-				char a= palabra.charAt(aleatorio1);
-				System.out.println("El caracter aleatorio es "+a);*/
+//				System.out.println("Introduce una palabra por favor");
+//				String palabra= scLine.nextLine();
+//				int longitud1= palabra.length();
+//				int aleatorio1= random.nextInt(longitud1);
+//				char a= palabra.charAt(aleatorio1);
+//				System.out.println("El caracter aleatorio es "+a);
 				
 				//Ejercicio: preguntar por una frase y que devuelva un caracter aleatorio y que no se muestre ningún espacio
-				/*System.out.println("Introduce una frase por favor");
-				String frase= scLine.nextLine();
-				frase= frase.replace(" ", "");				
-				int longitud1= frase.length();
-				int aleatorio1= random.nextInt(longitud1);
-				char a= frase.charAt(aleatorio1);
-				System.out.println("El caracter aleatorio es "+a);*/
+//				System.out.println("Introduce una frase por favor");
+//				String frase= scLine.nextLine();
+//				frase= frase.replace(" ", "");				
+//				int longitud1= frase.length();
+//				int aleatorio1= random.nextInt(longitud1);
+//				char a= frase.charAt(aleatorio1);
+//				System.out.println("El caracter aleatorio es "+a);
 				
 				//Ejercicio: que dé un número aleatorio entre 1 y 20. Tiene que poner El primer número aleatorio es x. Pulsa
 				//enter para continuar - Después segundo numero aleatorio y enter para continuar y por último un número
 				//aleatorio etre 3 y 12 del aleatorio anterior
-				/*Random r= new Random();
-				int a= r.nextInt();
-				int num1= r.nextInt(20)+1;
+				Random random= new Random();
+				int a= random.nextInt();
+				int num1= random.nextInt(1,21);
 				System.out.println("El primer número aleatorio es "+num1);
 				System.out.println("Pulsa enter para continuar");
 				scLine.nextLine();
-				int num2= r.nextInt(20)+1;
+				int num2= random.nextInt(1,21);
 				System.out.println("El segundo número aleatorio es "+num2);
 				System.out.println("Pulsa enter para continuar");
 				scLine.nextLine();
