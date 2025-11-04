@@ -34,26 +34,26 @@ public class practicaObjetos {
 		
 		//EJERCICIO 3
 		
-			/*System.out.println("Introduce tu nombre");
-			String nombre= scLine.nextLine();
-			System.out.println("Introduce tu ciudad de nacimiento");
-			String ciudad= scLine.nextLine();
-			System.out.println("Hola, me llamo "+nombre+" y nací en "+ciudad);*/
+//			System.out.println("Introduce tu nombre");
+//			String nombre= scLine.nextLine();
+//			System.out.println("Introduce tu ciudad de nacimiento");
+//			String ciudad= scLine.nextLine();
+//			System.out.println("Hola, me llamo "+nombre+" y nací en "+ciudad);
 		
 		//EJERCICIO 4
-		
-			System.out.println("Introduce el primer número");
-			double num1= scDouble.nextDouble();	
-			System.out.println("Introduce el segundo número");
-			double num2= scDouble.nextDouble();
-			double suma= Math.round((num1+num2)*10.0)/10.0;
-			System.out.println("Suma: "+suma);
-			double resta = Math.round((num1-num2) * 10) / 10.0;
-			System.out.println("Resta: "+resta);
-	        double multiplicacion = Math.round((num1 * num2) * 10) / 10.0;
-	        System.out.println("Multiplicación: "+multiplicacion);
-	        double division = Math.round((num1 / num2) * 10) / 10.0;
-	        System.out.println("División: "+division);
+//		
+//			System.out.println("Introduce el primer número");
+//			double num1= scDouble.nextDouble();	
+//			System.out.println("Introduce el segundo número");
+//			double num2= scDouble.nextDouble();
+//			double suma= Math.round((num1+num2)*10.0)/10.0;
+//			System.out.println("Suma: "+suma);
+//			double resta = Math.round((num1-num2) * 10) / 10.0;
+//			System.out.println("Resta: "+resta);
+//	        double multiplicacion = Math.round((num1 * num2) * 10) / 10.0;
+//	        System.out.println("Multiplicación: "+multiplicacion);
+//	        double division = Math.round((num1 / num2) * 10) / 10.0;
+//	        System.out.println("División: "+division);
 		
 		//EJERCICIO 5 
 		

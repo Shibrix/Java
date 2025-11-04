@@ -65,16 +65,16 @@ public class practicaObjetos2 {
 		
 		//EJERCICIO 4
 		
-		/*System.out.println("Introduce tu correo:");
-		String correo= scLine.nextLine();
-		int arroba= correo.indexOf('@');
-		String usuario= correo.substring(0, arroba);
-		System.out.println("Usuario: "+usuario);
-		int punto= correo.indexOf('.', arroba);		
-		String dominio= correo.substring(arroba+1, punto);
-		System.out.println("Dominio: "+dominio);
-		String tdl= correo.substring(punto+1);
-		System.out.println("TDL: "+tdl);*/
+//		System.out.println("Introduce tu correo:");
+//		String correo= scLine.nextLine();
+//		int arroba= correo.indexOf('@');
+//		String usuario= correo.substring(0, arroba);
+//		System.out.println("Usuario: "+usuario);
+//		int punto= correo.indexOf('.', arroba);		
+//		String dominio= correo.substring(arroba+1, punto);
+//		System.out.println("Dominio: "+dominio);
+//		String tdl= correo.substring(punto+1);
+//		System.out.println("TDL: "+tdl);
 		
 		//EJERCICIO 5
 		
