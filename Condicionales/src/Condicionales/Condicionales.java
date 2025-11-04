@@ -15,7 +15,7 @@ public class Condicionales {
 //		String palabra= scLine.nextLine();
 //		//para hacer un if con palabras es mejor usar equals en vez de ==
 //		if(palabra.equalsIgnoreCase("jueves")) {
-//			System.out.println("Has introducido jueves");// si pones equalsIgnoreCase ignora as mayúsculas o minúsculas, se fija en las palabras
+//			System.out.println("Has introducido jueves");// si pones equalsIgnoreCase ignora las mayúsculas o minúsculas, se fija en las palabras
 //		}
 //		else {
 //			System.out.println("Has introducido algo diferente a jueves");
@@ -55,7 +55,7 @@ public class Condicionales {
 //			System.out.println("a es menor o igual a b");
 //			System.out.println("a es diferente de 4");
 //		} else {
-//			System.out.println("A unas malas seguro que estoy sale");
+//			System.out.println("A unas malas seguro que esto sale");
 //		}
 //		System.out.println("El programa continúa por aquí");
 
@@ -91,7 +91,7 @@ public class Condicionales {
 //			break;
 //		}
 		
-		//EJERCICIO: hacer prgrama que pida introduce s/n y que dé la respuesta adecuada. Si dices otra cosa, que diga no lo entiendo
+		//EJERCICIO: hacer programa que pida introduce s/n y que dé la respuesta adecuada. Si dices otra cosa, que diga no lo entiendo
 		System.out.println("Introduce un (s/n)");
 		String sOn= scLine.nextLine();
 		
