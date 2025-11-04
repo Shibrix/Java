@@ -58,17 +58,17 @@ public class repasoEstructurasControl {
 //		}
 		
 		//EJERCICIO: Que os pida introducir una frase y nos diga cuantas palabras tiene la frase y que se repita hasta que pongas fin
-		Scanner scLine= new Scanner(System.in);
-		
-		while(true) {
-		
-		System.out.println("Introduzca una frase para que contemos las palabras");
-		String frase= scLine.nextLine();
-		frase=frase.trim();
-		int primerEspacio= frase.indexOf(" ");
-		if(frase.equalsIgnoreCase("fin")) {
-			break;
-		}
+//		Scanner scLine= new Scanner(System.in);
+//		
+//		while(true) {
+//		
+//		System.out.println("Introduzca una frase para que contemos las palabras");
+//		String frase= scLine.nextLine();
+//		frase=frase.trim();
+//		int primerEspacio= frase.indexOf(" ");
+//		if(frase.equalsIgnoreCase("fin")) {
+//			break;
+//		}
 //		//MODO 1 DE HACERLO
 //		int longitud= frase.length();
 //		frase= frase.replace(" ","");
@@ -76,19 +76,29 @@ public class repasoEstructurasControl {
 //		int palabras= longitud-longitud2+1;
 //		System.out.println("Numero palabras: "+palabras);
 		//MODO 2
-		int contador= 0;
-		for(int i=0; i<frase.length(); i++) {
-			if(frase.charAt(i)== ' ' ) {
-				contador++;
-			}
-			int palabras= contador+1;
-			System.out.println("Numero de palabras "+palabras);
+//		int contador= 0;
+//		for(int i=0; i<frase.length(); i++) {
+//			if(frase.charAt(i)== ' ' ) {
+//				contador++;
+//			}
+//			int palabras= contador+1;
+//			System.out.println("Numero de palabras "+palabras);
+//			
+//		}
+//		
+//		}
+		
+		//Recorrer los números del 1 al 50 y obtener su suma
+		
+		int suma=0;
+		
+		for(int i=1; i<=50; i++) {
+			System.out.println("La suma de "+i+"+"+suma+" es igual a "+(suma+i));
+			suma= suma+i;
 			
 		}
 		
-		}
-		
-		
+		System.out.println("La suma total de los números es de "+suma);
 		
 		
 	}
