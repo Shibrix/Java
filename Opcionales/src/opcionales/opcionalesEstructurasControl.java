@@ -36,17 +36,115 @@ public class opcionalesEstructurasControl {
 		
 		//EJERCICIO 2
 		
-		System.out.println("Introduce un número");
-		double numero1= scInt.nextInt();
-		System.out.println("Introduce otro número");
-		double numero2= scInt.nextInt();
-		System.out.println("Pulse enter cada vez para obtener resultados");
-		double numeroAnterior= numero1;
-		while(numeroAnterior<1000000) {
-			scLine.nextLine();
-			numeroAnterior= Math.pow(numeroAnterior, numero2);
-			System.out.println("Elevado "+numeroAnterior);
-		}
+//		System.out.println("Introduce un número");
+//		int numero1 = scInt.nextInt();
+//		System.out.println("Introduce otro número");
+//		int numero2 = scInt.nextInt();
+//		System.out.println("Pulse enter cada vez para obtener resultados");
+//		double numeroCuadrado = Math.pow(numero1, numero2);
+//		scLine.nextLine();
+//		System.out.println(numeroCuadrado);
+//		while (numeroCuadrado <= 1000000) {
+//			scLine.nextLine();
+//			numeroCuadrado = Math.pow(numeroCuadrado, numero2);
+//			System.out.println(numeroCuadrado);
+//		}
+//		System.out.println("El programa ha terminado");
+		
+		//EJERCICIO 3
+		
+//		boolean control = true;
+//		while (control) {
+//			System.out.println("Introduce una frase");
+//			String frase = scLine.nextLine();
+//			if (frase.equalsIgnoreCase("fin")) {
+//				control = false;
+//				System.out.println("El programa ha terminado");
+//				break;
+//			} else {
+//				int longitud = frase.length();
+//				int random1 = r.nextInt(longitud-1);
+//				int random2 = r.nextInt(longitud-1);
+//
+//				int minimo = Math.min(random1, random2);
+//				int maximo = Math.max(random1, random2);
+//
+//				String trozoFrase1 = frase.substring(0, minimo);
+//				String trozoFrase2 = frase.substring(minimo, maximo);
+//				String trozoFrase3 = frase.substring(maximo);
+//				System.out.println(
+//						"Los trozos de frase son : " + trozoFrase1 + " | " + trozoFrase2 + " | " + trozoFrase3);
+//			}
+//		}
+		
+		//EJERCICIO 4
+		
+//		boolean control = true;
+//		String letrasAleatorias = "";
+//		while (control) {
+//			System.out.println("Introduzca un número entero");
+//			int numero = scInt.nextInt();
+//			if (numero == -1) {
+//				control = false;
+//				System.out.println("La ejecución ha terminado");
+//				break;
+//			} else {
+//				String letras = "abcdefghijklmnñopqrstuvwxyz";
+//				int longitudLetras = letras.length();
+//				for (int i = 0; i < numero; i++) {
+//					int aleatorio = r.nextInt(longitudLetras);
+//					System.out.println("El aleatorio de la longitud es " + aleatorio);
+//					char c = letras.charAt(aleatorio);
+//					letrasAleatorias = letrasAleatorias + c + ",";
+//
+//				}
+//
+//				System.out.println(
+//						"Las letras aleatorias son " + letrasAleatorias.substring(0, letrasAleatorias.length() - 1));
+//			}
+//		}
+		
+		//EJERCICIO 5
+		
+		System.out.println("Introduzca un número");
+		int numero1 = scInt.nextInt();
+		int numero2 = 0;
+		double multiplicacion = 0;
+		int dividendo = 0;
+		double division = 0;
+		System.out.println("¿Multiplicar por?");
+		numero2 = scInt.nextInt();
+		multiplicacion = numero1 * numero2;
+		System.out.println("El resultado de multiplicar " + numero1 + "x" + numero2 + " es " + multiplicacion);
+		System.out.println("¿Dividir por?");
+		dividendo = scInt.nextInt();
+		division = multiplicacion / dividendo;
+		System.out.println("El resultado de dividir " + multiplicacion + "/" + dividendo + " es " + division);
 
+		while (true) {
+			System.out.println("¿Multiplicar por?");
+			numero2 = scInt.nextInt();
+			if (numero2 == 0) {
+				System.out.println("La ejecución ha terminado");
+				break;
+			} else {
+				multiplicacion = division * numero2;
+				System.out.println("El resultado de multiplicar " + division + "x" + numero2 + " es " + multiplicacion);
+				System.out.println("¿Dividir por?");
+				dividendo = scInt.nextInt();
+				if (dividendo == 0) {
+					System.out.println("La ejecución ha terminado");
+					break;
+				} else {
+					division = multiplicacion / dividendo;
+					System.out
+							.println("El resultado de dividir " + multiplicacion + "/" + dividendo + " es " + division);
+				}
+			}
+		}
+		
+		
+		
+		
 }
 }
