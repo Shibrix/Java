@@ -11,12 +11,12 @@ import java.awt.event.ActionEvent;
 public class PruebaWindowBuilder {
 
 	private JFrame frame;
-	private JTextField sumando1;
-	private JTextField sumando2;
+	private JTextField numero1;
+	private JTextField numero2;
 	private JTextField resultado;
 	private JTextField suma1Window;
-	private JTextField textField_1;
-	private JTextField textField_2;
+	private JTextField suma2Window;
+	private JTextField resultadoWindow;
 
 	/**
 	 * Launch the application.
@@ -50,17 +50,17 @@ public class PruebaWindowBuilder {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		sumando1 = new JTextField();
-		sumando1.setText("Sumando1");
-		sumando1.setBounds(10, 25, 96, 18);
-		frame.getContentPane().add(sumando1);
-		sumando1.setColumns(10);
+		numero1 = new JTextField();
+		numero1.setText("Sumando1");
+		numero1.setBounds(10, 25, 96, 18);
+		frame.getContentPane().add(numero1);
+		numero1.setColumns(10);
 		
-		sumando2 = new JTextField();
-		sumando2.setText("Sumando2");
-		sumando2.setColumns(10);
-		sumando2.setBounds(10, 53, 96, 18);
-		frame.getContentPane().add(sumando2);
+		numero2 = new JTextField();
+		numero2.setText("Sumando2");
+		numero2.setColumns(10);
+		numero2.setBounds(10, 53, 96, 18);
+		frame.getContentPane().add(numero2);
 		
 		resultado = new JTextField();
 		resultado.setText("Resultado");
@@ -73,25 +73,25 @@ public class PruebaWindowBuilder {
 		frame.getContentPane().add(suma1Window);
 		suma1Window.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setBounds(148, 53, 96, 18);
-		frame.getContentPane().add(textField_1);
+		suma2Window = new JTextField();
+		suma2Window.setColumns(10);
+		suma2Window.setBounds(148, 53, 96, 18);
+		frame.getContentPane().add(suma2Window);
 		
-		textField_2 = new JTextField();
-		textField_2.setColumns(10);
-		textField_2.setBounds(148, 87, 96, 18);
-		frame.getContentPane().add(textField_2);
+		resultadoWindow = new JTextField();
+		resultadoWindow.setColumns(10);
+		resultadoWindow.setBounds(148, 87, 96, 18);
+		frame.getContentPane().add(resultadoWindow);
 		
 		JButton suma = new JButton("SUMA");
 		suma.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				int Sumando1= Integer.parseInt(sumando1.getText());
-				int Sumando2= Integer.parseInt(sumando2.getText());
+				int sumando1= Integer.parseInt(suma1Window.getText());
+				int sumando2= Integer.parseInt(suma2Window.getText());
 				
-				int Resultado=Sumando1+Sumando2;
-				 String texto= String.valueOf(Resultado);
-				 textField_2.setText(texto);
+				int resultado=sumando1+sumando2;
+				 String texto= String.valueOf(resultado);
+				 resultadoWindow.setText(texto);
 	
 			}
 		});
