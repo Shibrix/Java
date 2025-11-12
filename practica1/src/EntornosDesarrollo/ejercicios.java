@@ -1,4 +1,5 @@
-package practica1;
+
+package EntornosDesarrollo;
 
 public class ejercicios {
 
