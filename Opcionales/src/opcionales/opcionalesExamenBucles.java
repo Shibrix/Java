@@ -283,6 +283,7 @@ public class opcionalesExamenBucles {
 		
 		
 		//EJERCICIO 10
+		
 		boolean primos = true;
 		for (int i = 2; i <= 400; i++) {
 			primos = true;

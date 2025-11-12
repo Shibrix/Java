@@ -52,7 +52,7 @@ public class opcionalesEstructurasControl {
 //		System.out.println("El programa ha terminado");
 		
 		//EJERCICIO 3
-		
+//		
 //		boolean control = true;
 //		while (control) {
 //			System.out.println("Introduce una frase");
@@ -106,42 +106,78 @@ public class opcionalesEstructurasControl {
 		
 		//EJERCICIO 5
 		
-		System.out.println("Introduzca un número");
-		int numero1 = scInt.nextInt();
-		int numero2 = 0;
-		double multiplicacion = 0;
-		int dividendo = 0;
-		double division = 0;
-		System.out.println("¿Multiplicar por?");
-		numero2 = scInt.nextInt();
-		multiplicacion = numero1 * numero2;
-		System.out.println("El resultado de multiplicar " + numero1 + "x" + numero2 + " es " + multiplicacion);
-		System.out.println("¿Dividir por?");
-		dividendo = scInt.nextInt();
-		division = multiplicacion / dividendo;
-		System.out.println("El resultado de dividir " + multiplicacion + "/" + dividendo + " es " + division);
+//		System.out.println("Introduzca un número");
+//		int numero1 = scInt.nextInt();
+//		int numero2 = 0;
+//		double multiplicacion = 0;
+//		int dividendo = 0;
+//		double division = 0;
+//		System.out.println("¿Multiplicar por?");
+//		numero2 = scInt.nextInt();
+//		multiplicacion = numero1 * numero2;
+//		System.out.println("El resultado de multiplicar " + numero1 + "x" + numero2 + " es " + multiplicacion);
+//		System.out.println("¿Dividir por?");
+//		dividendo = scInt.nextInt();
+//		division = multiplicacion / dividendo;
+//		System.out.println("El resultado de dividir " + multiplicacion + "/" + dividendo + " es " + division);
+//
+//		while (true) {
+//			System.out.println("¿Multiplicar por?");
+//			numero2 = scInt.nextInt();
+//			if (numero2 == 0) {
+//				System.out.println("La ejecución ha terminado");
+//				break;
+//			} else {
+//				multiplicacion = division * numero2;
+//				System.out.println("El resultado de multiplicar " + division + "x" + numero2 + " es " + multiplicacion);
+//				System.out.println("¿Dividir por?");
+//				dividendo = scInt.nextInt();
+//				if (dividendo == 0) {
+//					System.out.println("La ejecución ha terminado");
+//					break;
+//				} else {
+//					division = multiplicacion / dividendo;
+//					System.out
+//							.println("El resultado de dividir " + multiplicacion + "/" + dividendo + " es " + division);
+//				}
+//			}
+//		}
+		
+		//EJERCICIO 6
+		
+		System.out.println("Introduzca un número con muchos decimales");
+		double numero = scDouble.nextDouble();
 
-		while (true) {
-			System.out.println("¿Multiplicar por?");
-			numero2 = scInt.nextInt();
-			if (numero2 == 0) {
-				System.out.println("La ejecución ha terminado");
+		boolean control = true;
+
+		while (control) {
+			System.out.println("¿Quiere redondearlo con 1, 2 o 3 decimales?");
+			int opcion = scInt.nextInt();
+
+			switch (opcion) {
+			case 1:
+				numero = Math.round(numero * 10.0) / 10.0;
+				System.out.println("El número redondeado a 1 decimal: " + numero);
+				control = false;
 				break;
-			} else {
-				multiplicacion = division * numero2;
-				System.out.println("El resultado de multiplicar " + division + "x" + numero2 + " es " + multiplicacion);
-				System.out.println("¿Dividir por?");
-				dividendo = scInt.nextInt();
-				if (dividendo == 0) {
-					System.out.println("La ejecución ha terminado");
-					break;
-				} else {
-					division = multiplicacion / dividendo;
-					System.out
-							.println("El resultado de dividir " + multiplicacion + "/" + dividendo + " es " + division);
-				}
+			case 2:
+				numero = Math.round(numero * 100.0) / 100.0;
+				System.out.println("El número redondeado a 2 decimales: " + numero);
+				control = false;
+				break;
+			case 3:
+				numero = Math.round(numero * 1000.0) / 1000.0;
+				System.out.println("El número redondeado a 3 decimales: " + numero);
+				control = false;
+				break;
+			default:
+				System.out.println("El número introducido no es válido");
 			}
 		}
+		
+		
+		
+		
 		
 		
 		

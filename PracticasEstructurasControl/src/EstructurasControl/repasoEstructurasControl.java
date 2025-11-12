@@ -90,17 +90,75 @@ public class repasoEstructurasControl {
 		
 		//Recorrer los números del 1 al 50 y obtener su suma
 		
-		int suma=0;
+		//Con FOR
+//		int suma=0;
+//		
+//		for(int i=1; i<=50; i++) {
+//			System.out.println("La suma de "+i+"+"+suma+" es igual a "+(suma+i));
+//			suma= suma+i;
+//			
+//		}
+//		
+//		System.out.println("La suma total de los números es de "+suma);
+//		
+//		//Con WHILE
+//		int suma1 = 0;
+//		int i1 = 0;
+//		while (i1 <= 50) {
+//			suma1 = suma1 + i1;
+//			i1++;
+//		}
+//		 
+		 //EJERCICIO: suma de todos los números impares entre -25 y 50
 		
-		for(int i=1; i<=50; i++) {
-			System.out.println("La suma de "+i+"+"+suma+" es igual a "+(suma+i));
-			suma= suma+i;
+//		int suma=0;
+//		int i=-25;
+//		
+//		while (i <= 50) {
+//			if (i % 2 != 0) {
+//				suma = suma + i;				
+//				System.out.println(suma);
+//			}
+//			i++;
+//		}
+		
+//			int suma = 0;
+//			for (int i = -25; i <= 50; i++) {
+//				if (i % 2 != 0) {
+//					System.out.println("La suma de " + i + "+" + suma + " es igual a " + (suma + i));
+//					suma = suma + i;
+//					System.out.println(suma);
+//				}
+//			}
 			
-		}
-		
-		System.out.println("La suma total de los números es de "+suma);
-		
-		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 	}
-
 }
