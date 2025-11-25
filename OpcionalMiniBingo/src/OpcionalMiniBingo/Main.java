@@ -19,101 +19,133 @@ public class Main {
 		jugador3.setDinero(20);
 		jugador4.setDinero(20);
 		jugador5.setDinero(20);
-
+		String ganadores = "";
+		String ganadorAbsoluto = "";
 		boolean empiecePartida = true;
-		
 
 		while (empiecePartida) {
-			
-			System.out.println("Pulse ENTER para iniciar la partida");			
-			scLine.nextLine();			
-			
-			jugador1.resetearAciertos();
-			jugador2.resetearAciertos();
-			jugador3.resetearAciertos();
-			jugador4.resetearAciertos();
-			jugador5.resetearAciertos();
-			
-			jugador1.asignarCarton();
-			jugador2.asignarCarton();
-			jugador3.asignarCarton();
-			jugador4.asignarCarton();
-			jugador5.asignarCarton();
-			
-			
+
+			System.out.println("Pulse ENTER para iniciar la partida");
+			int contadorVivos = 0;
+			scLine.nextLine();
+			ganadores = "";
+
+			if (jugador1.seguirJugando()) {
+				jugador1.resetearAciertos();
+				jugador1.asignarCarton();
+				contadorVivos++;
+			}
+			if (jugador2.seguirJugando()) {
+				jugador2.resetearAciertos();
+				jugador2.asignarCarton();
+				contadorVivos++;
+			}
+			if (jugador3.seguirJugando()) {
+				jugador3.resetearAciertos();
+				jugador3.asignarCarton();
+				contadorVivos++;
+			}
+			if (jugador4.seguirJugando()) {
+				jugador4.resetearAciertos();
+				jugador4.asignarCarton();
+				contadorVivos++;
+			}
+			if (jugador5.seguirJugando()) {
+				jugador5.resetearAciertos();
+				jugador5.asignarCarton();
+				contadorVivos++;
+			}
+
 			Bombo bola = new Bombo();
 			boolean control = true;
-			String ganadores = "";
+
 			int contador = 0;
-			double bote= 25;
-			
-			
-			while (control) {
+			double bote = 5 * contadorVivos;
 
-				int sacarBola = bola.sacarBola();
+			if (contadorVivos != 1) {
+				while (control) {
 
-				jugador1.comprobarBola(sacarBola);
-				jugador2.comprobarBola(sacarBola);
-				jugador3.comprobarBola(sacarBola);
-				jugador4.comprobarBola(sacarBola);
-				jugador5.comprobarBola(sacarBola);
+					int sacarBola = bola.sacarBola();
 
-				if (jugador1.esGanador() || jugador2.esGanador() || jugador3.esGanador() || jugador4.esGanador()
-						|| jugador5.esGanador()) {
-					if (jugador1.esGanador() == true) {
-						ganadores = jugador1.getNombre();
-						contador++;
+					jugador1.comprobarBola(sacarBola);
+					jugador2.comprobarBola(sacarBola);
+					jugador3.comprobarBola(sacarBola);
+					jugador4.comprobarBola(sacarBola);
+					jugador5.comprobarBola(sacarBola);
 
-					}
-					if (jugador2.esGanador() == true) {
-						if (contador > 0) {
-							ganadores = ganadores + " y ";
+					if (jugador1.esGanador() || jugador2.esGanador() || jugador3.esGanador() || jugador4.esGanador()
+							|| jugador5.esGanador()) {
+						if (jugador1.esGanador() == true) {
+							ganadores = jugador1.getNombre();
+							contador++;
+
 						}
-						ganadores = (ganadores + jugador2.getNombre());
-						contador++;
-					}
-					if (jugador3.esGanador() == true) {
-						if (contador > 0) {
-							ganadores = ganadores + " y ";
+						if (jugador2.esGanador() == true) {
+							if (contador > 0) {
+								ganadores = ganadores + " y ";
+							}
+							ganadores = (ganadores + jugador2.getNombre());
+							contador++;
 						}
-						ganadores = (ganadores + jugador3.getNombre());
-						contador++;
-					}
-					if (jugador4.esGanador() == true) {
-						if (contador > 0) {
-							ganadores = ganadores + " y ";
+						if (jugador3.esGanador() == true) {
+							if (contador > 0) {
+								ganadores = ganadores + " y ";
+							}
+							ganadores = (ganadores + jugador3.getNombre());
+							contador++;
 						}
-						ganadores = (ganadores + jugador4.getNombre());
-						contador++;
-					}
-					if (jugador5.esGanador() == true) {
-						if (contador > 0) {
-							ganadores = ganadores + " y ";
+						if (jugador4.esGanador() == true) {
+							if (contador > 0) {
+								ganadores = ganadores + " y ";
+							}
+							ganadores = (ganadores + jugador4.getNombre());
+							contador++;
 						}
-						ganadores = (ganadores + jugador5.getNombre());
-						contador++;
+						if (jugador5.esGanador() == true) {
+							if (contador > 0) {
+								ganadores = ganadores + " y ";
+							}
+							ganadores = (ganadores + jugador5.getNombre());
+							contador++;
+						}
+						System.out.println("La partida ha sido ganada por " + ganadores + "\n");
+						double premioGanador = bote / contador;
+						premioGanador = Math.round(premioGanador * 100.0) / 100.0;
+
+						jugador1.darDinero(jugador1.esGanador(), premioGanador);
+						jugador2.darDinero(jugador2.esGanador(), premioGanador);
+						jugador3.darDinero(jugador3.esGanador(), premioGanador);
+						jugador4.darDinero(jugador4.esGanador(), premioGanador);
+						jugador5.darDinero(jugador5.esGanador(), premioGanador);
+
+						jugador1.mostrarDinero();
+						jugador2.mostrarDinero();
+						jugador3.mostrarDinero();
+						jugador4.mostrarDinero();
+						jugador5.mostrarDinero();
+						control = false;
 					}
-					System.out.println("La partida ha sido ganada por " + ganadores+"\n");
-					double premioGanador= bote/contador;
-					premioGanador= Math.round(premioGanador*100.0)/100.0;
-					
-					jugador1.darDinero(jugador1.esGanador(), premioGanador);
-					jugador2.darDinero(jugador2.esGanador(), premioGanador);
-					jugador3.darDinero(jugador3.esGanador(), premioGanador);					
-					jugador4.darDinero(jugador4.esGanador(), premioGanador);					
-					jugador5.darDinero(jugador5.esGanador(), premioGanador);
-					
-					
-					jugador1.mostrarDinero();
-					jugador2.mostrarDinero();
-					jugador3.mostrarDinero();
-					jugador4.mostrarDinero();
-					jugador5.mostrarDinero();
-					control = false;
+
 				}
 
+			} else {
+				empiecePartida = false;
 			}
+
 		}
 
+		if (jugador1.getDinero() > 5)
+			ganadorAbsoluto = jugador1.getNombre();
+		if (jugador2.getDinero() > 5)
+			ganadorAbsoluto = jugador2.getNombre();
+		if (jugador3.getDinero() > 5)
+			ganadorAbsoluto = jugador3.getNombre();
+		if (jugador4.getDinero() > 5)
+			ganadorAbsoluto = jugador4.getNombre();
+		if (jugador5.getDinero() > 5)
+			ganadorAbsoluto = jugador5.getNombre();
+
+		System.out.println("\nYa no se pueden jugar más partidas. El ganador absoluto es " + ganadorAbsoluto);
+		scLine.close();
 	}
 }

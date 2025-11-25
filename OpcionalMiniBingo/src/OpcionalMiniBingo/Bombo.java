@@ -1,9 +1,11 @@
 package OpcionalMiniBingo;
+
 import java.util.*;
+
 public class Bombo {
 	Random r = new Random();
 	Scanner sc = new Scanner(System.in);
-	
+
 	private int bola;
 
 	public int getBola() {
@@ -14,26 +16,18 @@ public class Bombo {
 		this.bola = bola;
 	}
 
-	public int sacarBola() {	
-		
-			int nuevaBola;
+	public int sacarBola() {
 
-			do {
-				nuevaBola = r.nextInt(1, 21);
+		int nuevaBola;
 
-			} while (this.bola == nuevaBola);
+		do {
+			nuevaBola = r.nextInt(1, 21);
 
-			this.bola = nuevaBola;
+		} while (this.bola == nuevaBola);
 
-			System.out.println("Ha salido la bola " + nuevaBola + "\n");
-			return bola;
-		}
+		this.bola = nuevaBola;
+
+		System.out.println("Ha salido la bola " + nuevaBola + "\n");
+		return bola;
 	}
-		
-	
-	
-	
-	
-	
-	
-
+}

@@ -8,9 +8,9 @@ public class Jugador {
 	private int numero1;
 	private int numero2;
 	private int numero3;
-	private boolean aciertoNum1; //true: acertado - false: fallado
-	private boolean aciertoNum2;//true: acertado - false: fallado
-	private boolean aciertoNum3;//true: acertado - false: fallado
+	private boolean aciertoNum1; // true: acertado - false: fallado
+	private boolean aciertoNum2;// true: acertado - false: fallado
+	private boolean aciertoNum3;// true: acertado - false: fallado
 	private double dinero;
 	private boolean sigueJugando; // true: sigue jugando - false: ha sido eliminado
 
@@ -73,7 +73,7 @@ public class Jugador {
 	public Jugador(String nombre) {
 		super();
 		this.nombre = nombre;
-	}	
+	}
 
 	public double getDinero() {
 		return dinero;
@@ -81,7 +81,7 @@ public class Jugador {
 
 	public void setDinero(double dinero) {
 		this.dinero = dinero;
-	}	
+	}
 
 	public boolean isSigueJugando() {
 		return sigueJugando;
@@ -97,10 +97,10 @@ public class Jugador {
 		int numero1 = r.nextInt(1, 21);
 		int numero2 = r.nextInt(1, 21);
 		int numero3 = r.nextInt(1, 21);
-		
-		this.dinero-=5;	
-		seguirJugando();
-		
+
+		this.dinero -= 5;
+		this.dinero = Math.round(this.dinero * 100.0) / 100.0;
+
 		while (numero1 == numero2 || numero1 == numero3 || numero2 == numero3) {
 			numero1 = r.nextInt(1, 21);
 			numero2 = r.nextInt(1, 21);
@@ -113,6 +113,8 @@ public class Jugador {
 	}
 
 	public void comprobarBola(int bolaSacada) {
+		if (!this.sigueJugando)
+			return;
 
 		if (bolaSacada == this.numero1) {
 			this.aciertoNum1 = true;
@@ -130,42 +132,45 @@ public class Jugador {
 
 	public boolean esGanador() {
 		boolean ganador = false;
+		if (!this.sigueJugando)
+			return false;
 		if (aciertoNum1 == true && aciertoNum2 == true && aciertoNum3 == true) {
 			ganador = true;
 		}
 		return ganador;
 
 	}
-	
-	public void mostrarDinero() {		
-		System.out.println("Al jugador " + this.nombre + " le quedan " + this.dinero + "€");		
-		
+
+	public void mostrarDinero() {
+		System.out.println("Al jugador " + this.nombre + " le quedan " + this.dinero + "€");
+
 	}
-	
+
 	public void darDinero(boolean ganador, double bote) {
-	
-		if(ganador==true) {
-			this.dinero= this.dinero+bote;
+
+		if (ganador == true) {
+			this.dinero = this.dinero + bote;
+		} else {
+
 		}
-		else {
-		
-		}		
-		
+
 	}
-	public void seguirJugando() {
-		if(this.dinero<=0) {
-			this.sigueJugando= false;
-			System.out.println("El jugador "+this.nombre+" ha sido eliminado, se ha quedado sin dinero");
-		}
-		else {
-			this.sigueJugando= true;
+
+	public boolean seguirJugando() {
+		if (this.dinero < 5) {
+			this.sigueJugando = false;
+			System.out.println("El jugador " + this.nombre + " ha sido eliminado, se ha quedado sin dinero");
+			return false;
+		} else {
+			this.sigueJugando = true;
+			return true;
 		}
 	}
-	
+
 	public void resetearAciertos() {
-		this.aciertoNum1=false;
-		this.aciertoNum2=false;
-		this.aciertoNum3= false;
+		this.aciertoNum1 = false;
+		this.aciertoNum2 = false;
+		this.aciertoNum3 = false;
 	}
 
 }
