@@ -55,8 +55,8 @@ public class Main {
 				break;
 			}
 
-		} while (!jugador1.esGanador() || !jugador2.esGanador() || jugador3.esGanador() || jugador4.esGanador()
-				|| jugador5.esGanador());
+		} while (!jugador1.esGanador() || !jugador2.esGanador() || !jugador3.esGanador() || !jugador4.esGanador()
+				|| !jugador5.esGanador());
 		System.out.println("La partida ha finalizado");
 	}
 

@@ -2,6 +2,8 @@ package Static;
 
 public class Jugador {
 	
+	
+	public static String equipo; //es la misma para todos los jugadores, para todos los objetos jugador
 	private String nombre;
 	private int numero;
 	private String posicion;
@@ -19,6 +21,7 @@ public class Jugador {
 	}
 
 	//CONSTRUCTOR VACÍO
+	
 	public Jugador() {
 		super();
 	}
@@ -104,15 +107,33 @@ public class Jugador {
 		if(convocado==true) {
 			pos= this.posicion;
 		}else {
-			pos="No juega por gordo";
+			pos="no juega por gordo";
 		}
 		
 		return pos;
+	}	
+
+	public static void cambiarEquipo(String nuevoEquipo) {
+		equipo= nuevoEquipo;
+		//this.nombre= "Manuel";
+		//aquí dentro no puedo poner nada que no sea estático		
+		
 	}
 	
 	
 	
 	
 	
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
