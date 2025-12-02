@@ -27,8 +27,23 @@ public class Gato extends Animal{
 		this.intensidadRonroneo = intensidadRonroneo;
 	}
 	
+	//MÉTODOS
 	
-	
+		public void hacerSonido() {
+			System.out.println("rnnnnnnnrnnn Miau");
+		}
+
+
+		@Override
+		//Para crear este método con los atributos del padre, le damos a source>generate to string y marcamos también el segundo
+		//campo (inherit fields)
+		public String toString() {
+			return "Gato [intensidadRonroneo=" + intensidadRonroneo + ", nombre=" + nombre + ", edad=" + edad
+					+ ", peso=" + peso + ", duenio=" + duenio + "]";
+		}
+
+
+
 	
 	
 	

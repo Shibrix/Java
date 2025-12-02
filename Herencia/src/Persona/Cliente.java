@@ -3,16 +3,18 @@ package Persona;
 public class Cliente extends Persona {
 
 	private int tarjetaCliente;
-
-	public Cliente(String nombre, String apellidos, String dni, int tarjetaCliente) {
+	private double dineroGastado;
+	
+	public Cliente(String nombre, String apellidos, String dni, int tarjetaCliente, double dineroGastado) {
 		super(nombre, apellidos, dni);
 		this.tarjetaCliente = tarjetaCliente;
+		this.dineroGastado = dineroGastado;
 	}
 
-	public Cliente(int tarjetaCliente) {
+	public Cliente() {
 		super();
-		this.tarjetaCliente = tarjetaCliente;
 	}
+	
 
 	public int getTarjetaCliente() {
 		return tarjetaCliente;
@@ -21,6 +23,16 @@ public class Cliente extends Persona {
 	public void setTarjetaCliente(int tarjetaCliente) {
 		this.tarjetaCliente = tarjetaCliente;
 	}
+
+	public double getDineroGastado() {
+		return dineroGastado;
+	}
+
+	public void setDineroGastado(double dineroGastado) {
+		this.dineroGastado = dineroGastado;
+	}
+
+
 	
 	
 	

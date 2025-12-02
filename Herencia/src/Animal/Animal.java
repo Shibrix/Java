@@ -1,10 +1,11 @@
 package Animal;
-
+import Persona.*;
 public class Animal {
 	
 	protected String nombre;
 	protected int edad;
 	protected double peso;
+	protected Persona duenio;
 	
 	//CONSTRUCTORES
 	
@@ -52,5 +53,16 @@ public class Animal {
 	public double calcularPrecio() {
 		return this.peso*15.0;
 	}
+	
+	public void hacerSonido() {
+		System.out.println("El animal hace ruido");
+	}
 
+	@Override
+	public String toString() {
+		return "Animal [nombre=" + nombre + ", edad=" + edad + ", peso=" + peso + ", duenio=" + duenio + "]";
+	}
+
+	
+	
 }

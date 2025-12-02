@@ -37,6 +37,21 @@ public class Perro extends Animal{
 		return this.peso;
 	}
 	
+	public void hacerSonido() {
+		
+		System.out.println("Guau, guau!");
+		
+	}
+
+
+	@Override
+	//Esta no es buena opción, mejor tomar la que hemos hecho en Gato
+	public String toString() {
+		System.out.println(super.toString());		
+		return "Perro [ladraFuerte=" + ladraFuerte + "]";
+	}
+
+
 	
 	
 
