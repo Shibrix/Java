@@ -7,5 +7,7 @@
 	</classpathentry>
 	<classpathentry kind="src" path="ParqueAtracciones"/>
 	<classpathentry kind="src" path="ParqueAtraccionesOpcional"/>
+	<classpathentry kind="src" path="repasoHerencia"/>
+	<classpathentry kind="src" path="Videoclub"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
