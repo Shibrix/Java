@@ -10,7 +10,6 @@ public class Main {
 	static LocalDateTime ldt2 = LocalDateTime.now();
 	static DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("EEEE dd/MM/YYYY HH:mm:ss");
 	static DateTimeFormatter dtf2 = DateTimeFormatter.ofPattern("dd/MM/YYYY HH:mm:ss");
-	static int contador = 0;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -193,7 +192,7 @@ public class Main {
 		System.out.println("Tiempo de diferencia: " + horas + " horas + " + diferencia + " minutos");
 		System.out.println();
 	}
-	
+
 	private static void restarHoras() {
 		// TODO Auto-generated method stub
 		System.out.println("¿Horas a restar?");
@@ -211,7 +210,7 @@ public class Main {
 		System.out.println("Tiempo de diferencia: " + horas + " horas + " + diferencia + " minutos");
 		System.out.println();
 	}
-	
+
 	private static void restarDias() {
 		// TODO Auto-generated method stub
 		System.out.println("¿Días a restar?");
@@ -229,7 +228,6 @@ public class Main {
 		System.out.println("Tiempo de diferencia: " + horas + " horas + " + diferencia + " minutos");
 		System.out.println();
 	}
-	
 
 	private static void restarMeses() {
 		// TODO Auto-generated method stub
@@ -248,7 +246,7 @@ public class Main {
 		System.out.println("Tiempo de diferencia: " + horas + " horas + " + diferencia + " minutos");
 		System.out.println();
 	}
-	
+
 	private static void restarAnios() {
 		// TODO Auto-generated method stub
 		System.out.println("¿Años a restar?");
@@ -266,6 +264,5 @@ public class Main {
 		System.out.println("Tiempo de diferencia: " + horas + " horas + " + diferencia + " minutos");
 		System.out.println();
 	}
-
 
 }
